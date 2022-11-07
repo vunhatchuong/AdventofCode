@@ -6,6 +6,5 @@ increases = sum(x < y for x, y in zip(depths, depths[1:]))
 print(increases)
 
 # Part Two
-
 increases = sum(x < y for x, y in zip(depths, depths[3:]))
 print(increases)

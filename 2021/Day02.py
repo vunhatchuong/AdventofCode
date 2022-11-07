@@ -14,7 +14,6 @@ horizontal = 0
 # print(horizontal * depths)
 
 # Part Two
-
 aim, d, h = 0, 0, 0
 for cmd, val in instructions:
     if cmd == "forward":

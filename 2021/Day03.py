@@ -1,14 +1,25 @@
 file = open("./input/Day03.in", "r", encoding="utf-8").read().splitlines()
 
-filter_gamma = [x[y] for x, y in zip(file, range(len(file[0])))]
+gamma_str = ""
+epsilon_str = ""
+bit_0 = 0
+bit_1 = 0
+for x in range(len(file[0])):
+    bit_0 = sum(1 for line in file if line[x] == '0')
+    bit_1 = len(file) - bit_0
+    if bit_0 > bit_1:
+        gamma_str += "0"
+        epsilon_str += "1"
+    else:
+        gamma_str += "1"
+        epsilon_str += "0"
 
-gamma = ""
+print(gamma_str)
+print(epsilon_str)
 
-# if filter_gamma.count("0") > filter_gamma.count("1"):
-#     gamma += "0"
-# else:
-#     gamma += "1"
+gamma_dec = int(gamma_str, 2)
+epsilon_dec = int(epsilon_str, 2)
+print(gamma_dec * epsilon_dec)
 
-# print(gamma)
-print(filter_gamma)
-# print(range(len(file[0])))
+# Part Two
+
