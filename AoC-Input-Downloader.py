@@ -29,3 +29,8 @@ else:
 
 with open(f"./{year}/input/Day{day:02}.in", "w+") as f:
     f.write(s.text)
+
+if not os.path.exists(f"./{year}/Day{day:02}.py"):
+    open(f"./{year}/Day{day:02}.py","w+")
+else:
+    print("File exist")
