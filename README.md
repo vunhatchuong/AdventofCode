@@ -12,3 +12,30 @@ python3 Aoc-Input-Downloader 2 2021
 
 ```
 
+## General tips
+
+- Use pydoc to discover or understand functions.
+
+```python
+
+python3 -m pydoc str.strip
+
+```
+
+or to start a server
+
+```python
+
+python3 -m pydoc -b
+
+```
+
+- Use pytest.
+
+```python
+
+assert pow(5,2) == 25
+
+```
+
+- Use builtin debug tool pdb.
